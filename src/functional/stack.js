@@ -9,13 +9,16 @@ var makeStack = function(){
 
   stack.push = function(value){
     size++;
-    storage = value;
+    storage[size] = value;
   };
 
   stack.pop = function(){
+    var temp = storage[size];
+    delete storage[size];
+
     size--;
     if (size <0) size = 0;
-    return storage;
+    return temp;
   };
 
   stack.size = function(){
