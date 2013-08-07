@@ -43,6 +43,13 @@ describe("stack", function() {
     expect(stack.size()).equal(0);
   });
 
+  it('should store a item when pushed', function() {
+    var a = 'a'
+    stack.push(a);
+    expect(stack.pop()).equal(a);
+  });
+
+
   it('should pop items in the LIFO order', function() {
     var a = 'a', b = 'b', c = 'c', d = 'd';
 
