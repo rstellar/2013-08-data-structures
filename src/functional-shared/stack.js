@@ -1,6 +1,4 @@
 var makeStack = function(){
-  //should we keep storage and size in this outer scope?
-  //or do they need to be a part of each new Stack?
   var newStack = {
     "_storage": {},
     "_size": 0
