@@ -1,3 +1,15 @@
 var Queue = function() {
-  // Hey! Copy your code from src/prototypal/queue.js and paste it here
+  this._storage = [];
+};
+
+Queue.prototype.enqueue = function(value){
+    this._storage.push(value);
+};
+
+Queue.prototype.dequeue = function(){
+  return this._storage.shift();
+};
+
+Queue.prototype.size = function(){
+  return this._storage.length;
 };
